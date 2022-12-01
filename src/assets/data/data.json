@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1,
+    "title": "Geshtalt",
+    "imageSrc": "https://i1.sndcdn.com/artworks-r7AlqkHFygzvvGcB-PoymjQ-t500x500.png",
+    "songs": [
+      { "id": 1, "title": "Give Up the Ghost", "length": "4:50" },
+      { "id": 2, "title": "Separator", "length": "5:20" },
+      { "id": 3, "title": "Bloom", "length": "5:15"},
+      { "id": 4, "title": "Morning Mr Magpie", "length": "4:41" },
+      { "id": 5, "title": "Little by Little", "length": "4:27" },
+      { "id": 6, "title": "Feral", "length": "3:13" },
+      { "id": 7, "title": "Lotus Flower", "length": "5:01" },
+      { "id": 8, "title": "Codex", "length": "4:47" },
+      { "id": 9, "title": "Give Up the Ghost", "length": "4:50" },
+      { "id": 10, "title": "Separator", "length": "5:20" }
+    ],
+    "description": "Album Info about something"
+  },
+  {
+    "id": 2,
+    "title": "ZHU",
+    "imageSrc": "https://i1.sndcdn.com/artworks-yCCXni3DBidp-0-t500x500.jpg",
+    "songs": [
+      { "id": 1, "title": "Lotus Flower", "length": "5:01" },
+      { "id": 2, "title": "Codex", "length": "4:47" },
+      { "id": 3, "title": "Give Up the Ghost", "length": "4:50" },
+      { "id": 4, "title": "Separator", "length": "5:20" },
+      { "id": 5, "title": "Bloom", "length": "5:15"},
+      { "id": 6, "title": "Morning Mr Magpie", "length": "4:41" },
+      { "id": 7, "title": "Little by Little", "length": "4:27" },
+      { "id": 8, "title": "Feral", "length": "3:13" }
+    ],
+    "description": "Album Info"
+  },
+  {
+    "id": 3,
+    "title": "The King",
+    "imageSrc": "https://i1.sndcdn.com/artworks-3db880ca-b179-4199-8c4f-42f574ea3fef-0-t500x500.jpg",
+    "songs": [
+      { "id": 1, "title": "Bloom", "length": "5:15"},
+      { "id": 2, "title": "Morning Mr Magpie", "length": "4:41" },
+      { "id": 3, "title": "Little by Little", "length": "4:27" },
+      { "id": 4, "title": "Feral", "length": "3:13" },
+      { "id": 5, "title": "Lotus Flower", "length": "5:01" },
+      { "id": 6, "title": "Codex", "length": "4:47" },
+      { "id": 7, "title": "Give Up the Ghost", "length": "4:50" },
+      { "id": 8, "title": "Separator", "length": "5:20" }
+    ],
+    "description": "Album Info"
+  },
+  {
+    "id": 4,
+    "title": "The Weekend",
+    "imageSrc": "https://i1.sndcdn.com/artworks-d7549c64-0802-4218-a3a6-6c0dcecd2ae6-0-t500x500.jpg",
+    "songs": [
+      { "id": 1, "title": "Airbag", "length": "4:44" },
+      { "id": 2, "title": "Paranoid Android", "length": "6:23" },
+      { "id": 3, "title": "Subterranean Homesick Alien", "length": "4:27" },
+      { "id": 4, "title": "Exit Music (For a Film)", "length": "4:24" },
+      { "id": 5, "title": "Let Down", "length": "4:59" },
+      { "id": 6, "title": "Karma Police", "length": "4:21" },
+      { "id": 7, "title": "Fitter Happier", "length": "1:57" },
+      { "id": 8, "title": "Electioneering", "length": "3:50" },
+      { "id": 9, "title": "Climbing Up the Walls", "length": "4:45" },
+      { "id": 10, "title": "No Surprises", "length": "3:48" },
+      { "id": 11, "title": "Lucky", "length": "4:19" },
+      { "id": 12, "title": "The Tourist", "length": "5:24" }
+    ],
+    "description": "Album Info"
+  },
+  {
+    "id": 5,
+    "title": "Anfisa Letyago",
+    "imageSrc": "https://i1.sndcdn.com/artworks-WaWAouZ6TEydqgl1-s4v0sg-t500x500.jpg",
+    "songs": [
+      { "id": 1, "title": "Climbing Up the Walls", "length": "4:45" },
+      { "id": 2, "title": "No Surprises", "length": "3:48" },
+      { "id": 3, "title": "Lucky", "length": "4:19" },
+      { "id": 4, "title": "The Tourist", "length": "5:24" }
+    ],
+    "description": "Album Info"
+  }
+  ,
+  {
+    "id": 6,
+    "title": "Eminem",
+    "imageSrc": "https://i1.sndcdn.com/artworks-WaWAouZ6TEydqgl1-s4v0sg-t500x500.jpg",
+    "songs": [
+      { "id": 1, "title": "Climbing Up the Walls", "length": "4:45" },
+      { "id": 2, "title": "No Surprises", "length": "3:48" },
+      { "id": 3, "title": "Lucky", "length": "4:19" },
+      { "id": 4, "title": "The Tourist", "length": "5:24" },
+      { "id": 5, "title": "Climbing Up the Walls", "length": "4:45" },
+      { "id": 6, "title": "No Surprises", "length": "3:48" },
+      { "id": 7, "title": "Lucky", "length": "4:19" },
+      { "id": 8, "title": "The Tourist", "length": "5:24" },
+      { "id": 9, "title": "Climbing Up the Walls", "length": "4:45" },
+      { "id": 10, "title": "No Surprises", "length": "3:48" },
+      { "id": 11, "title": "Lucky", "length": "4:19" },
+      { "id": 12, "title": "The Tourist", "length": "5:24" }
+    ],
+    "description": "Album Info"
+  }
+]

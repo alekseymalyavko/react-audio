@@ -1,0 +1,14 @@
+.iconMore {
+  width: 15px;
+  height: 15px;
+  fill: var(--black);
+}
+
+.playerIcon {
+  width: 30px;
+  fill: var(--grey);
+}
+
+.playerIconRotate {
+  transform: scale(-1);
+}

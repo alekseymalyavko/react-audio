@@ -1,0 +1,54 @@
+.song {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.song .songImage {
+  position: relative;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.song > div:first-child span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--opacity-white);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.song > div:first-child span svg {
+  width: 15px;
+}
+
+.songImage img {
+  background: var(--grey);
+}
+
+.songTitle {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.songDescr {
+  font-size: 14px;
+  color: var(--grey);
+}
+
+.songMore {
+  margin-left: auto;
+}
