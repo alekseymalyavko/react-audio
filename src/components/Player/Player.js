@@ -44,6 +44,10 @@ export default function Player() {
     }
   }
 
+  const handleArrows = () => {
+    console.log('arrow clicked')
+  }
+
   return (
     <div className={`${style.playerContainer} ${isActive ? style.playerActive : ''}`}>
       <div className={style.player}>
@@ -61,13 +65,13 @@ export default function Player() {
             <div className={style.playerMediaAlbum} style={{backgroundImage: `url(${currentAlbum.imageSrc})`}}></div>
           </div>
           <div className={style.playerControlsContainer}>
-            <div><IconPlayPrev/></div>
+            <div onClick={() => handleArrows()}><IconPlayPrev/></div>
             <div onClick={() => handlePlay()}>
               {
                 isActive ? <IconStop/> : <IconPlay/>
               }
             </div>
-            <div><IconPlayNext/></div>
+            <div onClick={() => handleArrows()}><IconPlayNext/></div>
           </div>
         </div>
       </div>
