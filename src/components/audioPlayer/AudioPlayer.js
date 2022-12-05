@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
-import Album from "./components/Album/Album";
-import Song from "./components/Song/Song";
-import Player from "./components/Player/Player";
-import AudioContext from "./context/context";
+import Album from "../album/Album";
+import Song from "../song/Song";
+import Player from "../player/Player";
+import AudioContext from "../../context/context";
 
+import labels from '../../assets/data/labels.json'
 import style from "./audioPlayer.module.css";
 
 const AudioPlayer = () => {
-  const { albums, currentAlbum } = useContext(AudioContext);
-
   const [songs, setSongs] = useState([]);
+
+  const { albums, currentAlbum } = useContext(AudioContext);
   useEffect(() => {
     setSongs(currentAlbum.songs || []);
   }, [currentAlbum]);
@@ -17,7 +18,9 @@ const AudioPlayer = () => {
   return (
     <div className={style.playerContainer}>
       <div className={style.playerRow}>
-        <h3 className={style.playerTitle}>Albums</h3>
+        <h3 className={style.playerTitle}>
+          {labels.album}
+        </h3>
         <div className={style.playerRowScroll}>
           {albums.map((item) => (
             <Album key={item.id} album={item} />
@@ -25,7 +28,9 @@ const AudioPlayer = () => {
         </div>
       </div>
       <div className={style.playerRow}>
-        <h3 className={style.playerTitle}>Song List</h3>
+        <h3 className={style.playerTitle}>
+          {labels.songList}
+        </h3>
         <div>
           {songs.map((item, i) => (
             <Song 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { IconMore, IconPlay, IconPause } from '../../assets/icons/icons'
+import { IconMore, IconPlay, IconPause } from '../icons/icons'
 import AudioContext from "../../context/context";
 
 import style from './song.module.css'
@@ -9,11 +9,7 @@ export default function Song({ song, image, albumName }) {
   const [isActive, setIsActive] = useState(false);
   
   useEffect(() => {
-    if (currentSong.id) {
-      setIsActive(currentSong.id === song.id)
-    } else {
-      setIsActive(false)
-    }
+    setIsActive(currentSong.id ? currentSong.id === song.id : false)
   }, [currentSong, song.id])
 
   const handleMore = (title) => {

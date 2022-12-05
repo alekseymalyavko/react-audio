@@ -72,9 +72,10 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: 20%;
   background: var(--grey);
-  transition: width 0.3s;
+  width: 0%;
+  /* width: 20%; */
+  /* transition: width 0.3s; */
 }
 
 .playerMedia {

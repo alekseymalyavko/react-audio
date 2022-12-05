@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AudioContext from './context/context';
-import AudioPlayer from './AudioPlayer';
-import Loading from './components/Loading/Loading';
+import AudioPlayer from './components/audioPlayer/AudioPlayer';
+import Loading from './components/loading/Loading';
 
 import DATA from './assets/data/data.json'
 
@@ -16,8 +16,8 @@ const App = () => {
 
   const findCurrentAlbum = (id) => {
     const currentAlbum = albums.find(item => item.id === id);
-    setCurrentSong(initial);
     setCurrentAlbum(currentAlbum);
+    setCurrentSong(currentAlbum.songs[0]);
   }
 
   const findCurrentSong = (id) => {
@@ -28,11 +28,19 @@ const App = () => {
     setCurrentSong(state);
   }
 
-  const handleSongs = (isStop) => {
+  const handleSongs = (isStop, isPrev, isNext) => {
     if (isStop) {
       setCurrentSong(initial);
     } else {
-      setCurrentSong(currentAlbum.songs[0]);
+      const songList = currentAlbum?.songs.length - 1 || 0;
+      const curSong = currentSong?.id ? currentAlbum?.songs.findIndex(a => a.id === currentSong?.id) : 0;
+
+      const nextSong = curSong !== songList ? curSong + 1 : 0;
+      const prevSong = curSong !== 0 ? curSong - 1 : songList;
+
+      const songToPlay = currentSong?.id ? (isPrev ? prevSong : (isNext ? nextSong : curSong)) : 0;
+
+      setCurrentSong(currentAlbum.songs[songToPlay]);
     }
   }
 

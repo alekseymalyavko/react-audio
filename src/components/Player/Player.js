@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
-import { IconPlay, IconStop, IconPlayNext, IconPlayPrev } from '../../assets/icons/icons';
+import { IconPlay, IconStop, IconPlayNext, IconPlayPrev } from '../../components/icons/icons';
 import AudioContext from '../../context/context';
 
 import style from './player.module.css'
@@ -10,43 +10,43 @@ export default function Player() {
 
   const progressPlace = useRef();
 
+  const handlePlay = (isPlayStop, isPrev, isNext) => {
+    handleSongs((isPlayStop ? Boolean(currentSong?.id) : false), isPrev, isNext);
+  }
+
   useEffect(() => {
-    let count = 0;
-    let progress;
+    let progress = null;
+    let progressCount = 0;
+
     const finishProgress = () => {
-      clearInterval(progress);
-      count = 0;
-      progressPlace.current.style.width = `${count}%`;
+      if (progress !== null) {
+        clearInterval(progress);
+        progressCount = 0;
+        progressPlace.current.style.width = `${progressCount}%`;
+      }
     }
 
-    if (currentSong.id) {
-      setIsActive(true)
-
+    const startProgress = () => {
       progress = setInterval(() => {
-        count++
-        progressPlace.current.style.width = `${count}%`;
-      }, 200)
-    } else {
-      finishProgress();
-      setIsActive(false);
+        if (progressCount === 100) {
+          finishProgress();
+          handlePlay(false, false, true);
+
+          return
+        }
+        progressCount++;
+        progressPlace.current.style.width = `${progressCount}%`;
+      }, 100)
     }
+
+    currentSong.id ? startProgress() : finishProgress();
+
+    setIsActive(Boolean(currentSong?.id));
 
     return () => {
       finishProgress();
     }
   }, [currentSong]);
-
-  const handlePlay = () => {
-    if(!currentSong.id) {
-      handleSongs()
-    } else {
-      handleSongs(true)
-    }
-  }
-
-  const handleArrows = () => {
-    console.log('arrow clicked')
-  }
 
   return (
     <div className={`${style.playerContainer} ${isActive ? style.playerActive : ''}`}>
@@ -65,13 +65,13 @@ export default function Player() {
             <div className={style.playerMediaAlbum} style={{backgroundImage: `url(${currentAlbum.imageSrc})`}}></div>
           </div>
           <div className={style.playerControlsContainer}>
-            <div onClick={() => handleArrows()}><IconPlayPrev/></div>
-            <div onClick={() => handlePlay()}>
+            <div onClick={() => handlePlay(false, true, false)}><IconPlayPrev/></div>
+            <div onClick={() => handlePlay(true)}>
               {
                 isActive ? <IconStop/> : <IconPlay/>
               }
             </div>
-            <div onClick={() => handleArrows()}><IconPlayNext/></div>
+            <div onClick={() => handlePlay(false, false, true)}><IconPlayNext/></div>
           </div>
         </div>
       </div>
